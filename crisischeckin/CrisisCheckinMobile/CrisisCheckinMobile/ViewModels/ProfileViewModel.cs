@@ -116,6 +116,18 @@ namespace CrisisCheckinMobile.ViewModels
             }
         }
 
+        public ICommand Logout
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    navigation.InsertPageBefore(new LoginPage(), navigation.NavigationStack[0]);
+                    await navigation.PopToRootAsync();
+                });
+            }
+        }
+
         public ICommand CheckOutOfDisaster
         {
             get

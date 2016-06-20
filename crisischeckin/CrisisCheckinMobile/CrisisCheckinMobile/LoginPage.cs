@@ -30,22 +30,27 @@ namespace CrisisCheckinMobile
             _loginButton = new Button
             {
                 Text = "Login",
-                TextColor = Color.White
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
             };
             _loginButton.Clicked += OnLoginButtonClicked;
 
             _registerButton = new Button
             {
                 Text = "Register",
-                TextColor = Color.White
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
             };
             _registerButton.Clicked += OnRegistrationButtonClicked;
 
             BackgroundColor = Constants.HtBoxDarkBrown;
+            Title = "Crisis Checkin Login";
             Content = new StackLayout
-            {
+            { 
                 Orientation = StackOrientation.Vertical,
-                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                Padding = new Thickness(10, 100, 10, 20),
                 WidthRequest = 280.0,
                 Children =
                 {
@@ -62,8 +67,19 @@ namespace CrisisCheckinMobile
                         IsPassword = true,
                         WidthRequest = 280.0
                     },
-                    _loginButton,
-                    _registerButton
+
+                    new StackLayout()
+                    {
+                        Orientation = StackOrientation.Horizontal,
+                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        Spacing = 60.0,
+                        Children =
+                        {
+                            _loginButton,
+                            _registerButton
+                        }
+                    }
+                    
                 }
             };
         }
