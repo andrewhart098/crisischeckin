@@ -11,6 +11,7 @@ namespace CrisisCheckinMobile.Views
             var navigationPage = new NavigationPage(new ProfileView());
             navigationPage.Title = "Home";
             navigationPage.Icon = "Images/home_7.png";
+            navigationPage.BarBackgroundColor = Constants.HtBoxRed;
 
             Children.Add(navigationPage);
             Children.Add(new ResourceListPage()

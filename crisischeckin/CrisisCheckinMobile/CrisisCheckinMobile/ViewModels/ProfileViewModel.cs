@@ -123,8 +123,7 @@ namespace CrisisCheckinMobile.ViewModels
             {
                 return new Command(async () =>
                 {
-                    navigation.InsertPageBefore(new LoginPage(), navigation.NavigationStack[0]);
-                    await navigation.PopToRootAsync(true);
+                    await navigation.PopModalAsync(true);
                 });
             }
         }

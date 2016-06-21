@@ -37,6 +37,7 @@
     <Compile Include="ApiClient\CrisisCheckInApiClient.cs" />
     <Compile Include="ApiClient\ICrisisCheckInApi.cs" />
     <Compile Include="ApiClient\ICrisisCheckInApiClient.cs" />
+    <Compile Include="CustomRenderer\PaddedButton.cs" />
     <Compile Include="Pages\CommitmentPage.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DisasterCheckInPage.xaml.cs">

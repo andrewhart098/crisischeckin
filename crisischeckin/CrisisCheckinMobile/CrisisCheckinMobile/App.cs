@@ -1,5 +1,6 @@
 ﻿using CrisisCheckinMobile.Models;
 using CrisisCheckinMobile.Pages;
+using CrisisCheckinMobile.Views;
 using Xamarin.Forms;
 
 namespace CrisisCheckinMobile
@@ -18,24 +19,25 @@ namespace CrisisCheckinMobile
         }
         public static Page GetMainPage()
         {
-            
-            NavigationPage mainPage;
-            if (string.IsNullOrWhiteSpace(AuthToken))
-            {
-                mainPage = new NavigationPage(new LoginPage())
-                {
-                    BarBackgroundColor = Constants.HtBoxRed,
-                    BarTextColor = Color.White
-                };
-            }
-            else
-            {
-                mainPage = new NavigationPage(new DisasterListPage())
-                {
-                    BarBackgroundColor = Constants.HtBoxRed,
-                    BarTextColor = Color.White
-                };
-            }
+            return new LoginPage();
+               
+            //NavigationPage mainPage;
+            //if (string.IsNullOrWhiteSpace(AuthToken))
+            //{
+            //    mainPage = new NavigationPage(new LoginPage())
+            //    {
+            //        BarBackgroundColor = Constants.HtBoxRed,
+            //        BarTextColor = Color.White
+            //    };
+            //}
+            //else
+            //{
+            //    mainPage = new NavigationPage(new DisasterListPage())
+            //    {
+            //        BarBackgroundColor = Constants.HtBoxRed,
+            //        BarTextColor = Color.White
+            //    };
+            //}
 
             //if (Commitment != null)
             //{
@@ -43,7 +45,7 @@ namespace CrisisCheckinMobile
             //}
 
 
-            return mainPage;
+            //return mainPage;
         }
     }
 }

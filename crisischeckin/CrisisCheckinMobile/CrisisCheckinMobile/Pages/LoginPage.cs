@@ -1,4 +1,5 @@
 using System;
+using CrisisCheckinMobile.CustomRenderer;
 using CrisisCheckinMobile.Views;
 using Xamarin.Forms;
 
@@ -17,8 +18,8 @@ namespace CrisisCheckinMobile.Pages
             {
                 //App.IsUserLoggedIn = true;
                 //Navigation.InsertPageBefore(new ProfileView(), this);
-                Navigation.InsertPageBefore(new Views.MainPage(), Navigation.NavigationStack[0]);
-                await Navigation.PopToRootAsync(true);
+
+                await Navigation.PushModalAsync(new Views.MainPage(), true);
             }
             else
             {
@@ -28,23 +29,28 @@ namespace CrisisCheckinMobile.Pages
 
         public LoginPage()
         {
-            _loginButton = new Button
+            _loginButton = new PaddedButton
             {
                 Text = "Login",
                 TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                BorderWidth = 1.0,
+                BorderColor = Color.White
             };
             _loginButton.Clicked += OnLoginButtonClicked;
 
-            _registerButton = new Button
+            _registerButton = new PaddedButton
             {
                 Text = "Register",
                 TextColor = Color.White,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                BorderWidth = 1.0,
+                BorderColor = Color.White
             };
             _registerButton.Clicked += OnRegistrationButtonClicked;
 
             BackgroundColor = Constants.HtBoxDarkBrown;
+            
             Title = "Crisis Checkin Login";
             Content = new StackLayout
             { 
@@ -55,6 +61,12 @@ namespace CrisisCheckinMobile.Pages
                 WidthRequest = 280.0,
                 Children =
                 {
+                    new Image()
+                    {
+                        Source = ImageSource.FromFile("Images/Human-Toolbox_Logo_RGB.png"),
+                        Aspect = Aspect.AspectFit,
+                        Margin = new Thickness(0, 0, 0, 20.0)
+                    },
                     new Entry
                     {
                         Placeholder = "Username",
@@ -71,6 +83,7 @@ namespace CrisisCheckinMobile.Pages
 
                     new StackLayout()
                     {
+                        Margin = new Thickness(0, 20.0, 0, 0),
                         Orientation = StackOrientation.Horizontal,
                         HorizontalOptions = LayoutOptions.CenterAndExpand,
                         Spacing = 60.0,
