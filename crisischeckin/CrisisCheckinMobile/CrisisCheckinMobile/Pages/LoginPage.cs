@@ -1,8 +1,8 @@
-using CrisisCheckinMobile.Views;
 using System;
+using CrisisCheckinMobile.Views;
 using Xamarin.Forms;
 
-namespace CrisisCheckinMobile
+namespace CrisisCheckinMobile.Pages
 {
     public class LoginPage : ContentPage
     {
@@ -16,8 +16,9 @@ namespace CrisisCheckinMobile
             if (isValid)
             {
                 //App.IsUserLoggedIn = true;
-                Navigation.InsertPageBefore(new ProfileView(), this);
-                await Navigation.PopAsync();
+                //Navigation.InsertPageBefore(new ProfileView(), this);
+                Navigation.InsertPageBefore(new Views.MainPage(), Navigation.NavigationStack[0]);
+                await Navigation.PopToRootAsync(true);
             }
             else
             {

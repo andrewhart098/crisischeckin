@@ -14,7 +14,8 @@ namespace CrisisCheckinMobile.Views
         public ProfileView()
         {
             InitializeComponent();
-            BindingContext = new ProfileViewModel(this.Navigation); 
+            BindingContext = new ProfileViewModel(this.Navigation);
+            this.Title = "Home";
         }
     }
 }

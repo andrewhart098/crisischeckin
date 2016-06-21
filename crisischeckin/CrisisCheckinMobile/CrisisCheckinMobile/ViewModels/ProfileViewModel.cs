@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using CrisisCheckinMobile.Pages;
 using Xamarin.Forms;
 
 namespace CrisisCheckinMobile.ViewModels
@@ -123,7 +124,7 @@ namespace CrisisCheckinMobile.ViewModels
                 return new Command(async () =>
                 {
                     navigation.InsertPageBefore(new LoginPage(), navigation.NavigationStack[0]);
-                    await navigation.PopToRootAsync();
+                    await navigation.PopToRootAsync(true);
                 });
             }
         }

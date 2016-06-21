@@ -1,7 +1,7 @@
 ﻿using CrisisCheckinMobile.ViewModels;
 using Xamarin.Forms;
 
-namespace CrisisCheckinMobile
+namespace CrisisCheckinMobile.Pages
 {
     public class CommitmentPage : ContentPage
     {

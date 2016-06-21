@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using CrisisCheckinMobile.ApiClient;
 using CrisisCheckinMobile.ViewModels;
 using Xamarin.Forms;
 
-namespace CrisisCheckinMobile
+namespace CrisisCheckinMobile.Pages
 {
     //public class ResourceListPage : MasterDetailPage
 

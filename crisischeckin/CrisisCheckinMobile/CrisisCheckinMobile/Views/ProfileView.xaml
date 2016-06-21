@@ -15,12 +15,12 @@
 
       </Button>
 
-      <Button Text="My Requests"
+      <!--<Button Text="My Requests"
               Command="{Binding GoToMyRequests}"
               HorizontalOptions="FillAndExpand"
               VerticalOptions="Start"
                BorderWidth="1"
-              BorderColor="Black"/>
+              BorderColor="Black"/>-->
 
       <Button Text="My Info"
           Command="{Binding GoToMyInfo}"
@@ -29,34 +29,34 @@
                BorderWidth="1"
             BorderColor="Black"/>
 
-      <Button Text="View Disaster Data"
+      <!--<Button Text="View Disaster Data"
             Command="{Binding GoToViewDisasterData}"
              HorizontalOptions="FillAndExpand"
              VerticalOptions="Start"
                BorderWidth="1"
-              BorderColor="Black"/>
+              BorderColor="Black"/>-->
 
-      <Button Text="View Disaster Resources"
+      <!--<Button Text="View Disaster Resources"
             Command="{Binding GoToViewDisasterResources}"
              HorizontalOptions="FillAndExpand"
              VerticalOptions="Start"
                BorderWidth="1"
-              BorderColor="Black"/>
+              BorderColor="Black"/>-->
 
-      <Button Text="Add Resources"
+      <!--<Button Text="Add Resources"
             Command="{Binding AddResources}"
              HorizontalOptions="Center"
-             VerticalOptions="Center" />
+             VerticalOptions="Center" />-->
 
       <Button Text="Add Contacts"
              Command="{Binding AddContacts}"
               HorizontalOptions="Center"
               VerticalOptions="Center" />
 
-      <Button Text="Report Data"
+      <!--<Button Text="Report Data"
           Command="{Binding ReportData}"
            HorizontalOptions="Center"
-           VerticalOptions="Center" />
+           VerticalOptions="Center" />-->
 
       <Button Text="Check in to Disaster"
             Command="{Binding CheckInToDisaster}"

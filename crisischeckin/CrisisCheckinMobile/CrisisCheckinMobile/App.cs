@@ -1,4 +1,5 @@
 ﻿using CrisisCheckinMobile.Models;
+using CrisisCheckinMobile.Pages;
 using Xamarin.Forms;
 
 namespace CrisisCheckinMobile
@@ -17,6 +18,7 @@ namespace CrisisCheckinMobile
         }
         public static Page GetMainPage()
         {
+            
             NavigationPage mainPage;
             if (string.IsNullOrWhiteSpace(AuthToken))
             {
@@ -39,6 +41,7 @@ namespace CrisisCheckinMobile
             //{
             //    mainPage.Navigation.PushAsync(new CommitmentPage());
             //}
+
 
             return mainPage;
         }
