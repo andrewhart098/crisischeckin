@@ -8,12 +8,15 @@ namespace CrisisCheckinMobile.Views
         public MainPage()
         {
             BackgroundColor = Color.White;
-            var navigationPage = new NavigationPage(new ProfileView());
-            navigationPage.Title = "Home";
-            navigationPage.Icon = "Images/home_7.png";
-            navigationPage.BarBackgroundColor = Constants.HtBoxRed;
 
-            Children.Add(navigationPage);
+
+            var homePage = new NavigationPage(new ProfileView());
+            homePage.Title = "Home";
+            homePage.Icon = "Images/home_7.png";
+            homePage.BarBackgroundColor = Constants.HtBoxRed;
+            homePage.BarTextColor = Color.White;
+            Children.Add(homePage);
+
             Children.Add(new ResourceListPage()
             {
                 Title = "Resources",

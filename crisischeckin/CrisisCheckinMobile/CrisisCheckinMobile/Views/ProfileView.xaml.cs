@@ -16,6 +16,20 @@ namespace CrisisCheckinMobile.Views
             InitializeComponent();
             BindingContext = new ProfileViewModel(this.Navigation);
             this.Title = "Home";
+
+            Content =
+                new TableView
+                {
+                    Root = new TableRoot
+                    {
+                        new TableSection("Settings")
+                        {
+                            new EntryCell {Text = "New Voice Mail"},
+                            new EntryCell {Text = "New Mail"}
+                        }
+                    },
+                    Intent = TableIntent.Settings
+                };
         }
     }
 }

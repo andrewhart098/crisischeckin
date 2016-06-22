@@ -19,8 +19,14 @@ namespace CrisisCheckinMobile
         }
         public static Page GetMainPage()
         {
-            return new LoginPage();
-               
+            //return new LoginPage();
+
+            return new NavigationPage(new LoginPage())
+            {
+                BarBackgroundColor = Constants.HtBoxRed,
+                BarTextColor = Color.White
+            };
+
             //NavigationPage mainPage;
             //if (string.IsNullOrWhiteSpace(AuthToken))
             //{

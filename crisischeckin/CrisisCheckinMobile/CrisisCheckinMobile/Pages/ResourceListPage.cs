@@ -33,7 +33,8 @@ namespace CrisisCheckinMobile.Pages
                     return;
 
                 var selectedItem = args.SelectedItem as ResourceListItemViewModel;
-
+                Title = "Resources";
+                
                 Navigation.PushAsync(new ResourceViewPage(selectedItem));
 
             };
